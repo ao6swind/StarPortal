@@ -1,0 +1,56 @@
+@import "../scss/custom";
+
+/******************************
+ * 通用型樣式
+ ******************************/
+
+#pnlGridContainer{
+    display: grid;
+    height: 100%;
+    background-color: $bg-color-4;
+}
+
+app-header{
+    background-color: $bg-color-1;
+    color: $ft-color-1;
+}
+
+app-navbar{
+    background-color: $bg-color-2;
+    color: $ft-color-1;
+}
+
+app-footer{
+    background-color: $bg-color-1;
+    color: $ft-color-1;
+}
+
+/******************************
+ * Desktop 排版
+ ******************************/ 
+#pnlGridContainer{
+    grid-template-rows: 50px minmax(85%, auto) auto;
+    grid-template-columns: 250px auto;
+}
+
+app-header{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-start: 2;
+}
+
+app-navbar{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+app-footer{
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-start: 2;
+}
+
