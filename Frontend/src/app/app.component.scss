@@ -25,37 +25,90 @@ app-footer{
     color: $ft-color-1;
 }
 
+section{
+    padding: 20px;
+}
+
 /******************************
  * Desktop 排版
- ******************************/ 
-.pnl-explode{
-    grid-template-rows: 50px minmax(85%, auto) auto;
-    grid-template-columns: 250px auto;
+ ******************************/
+@media screen and (min-width: 796px)
+{
+    .pnl-explode{
+        grid-template-rows: 50px minmax(85%, auto) auto;
+        grid-template-columns: 250px auto;
+    }
+    
+    .pnl-implode{
+        grid-template-rows: 50px minmax(85%, auto) auto;
+        grid-template-columns: 75px auto;
+    }
+    
+    app-header{
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 2;
+        grid-column-start: 2;
+    }
+    
+    app-navbar{
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    
+    app-footer{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-start: 2;
+    }
+    section{
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-start: 2;
+    }
+}
+@media screen and (max-width: 795px)
+{
+    app-header{
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .pnl-explode{
+        grid-template-rows: 50px minmax(85%, auto) auto;
+        app-navbar{
+            display: none;
+        }
+        section{
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+        app-footer{
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+    }
+    
+    .pnl-implode{
+        grid-template-rows: 50px auto minmax(85%, auto) auto;
+        app-navbar{
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+        section{
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+        app-footer{
+            grid-row-start: 4;
+            grid-row-end: 4;
+        }
+    }
+    
+    
 }
 
-.pnl-implode{
-    grid-template-rows: 50px minmax(85%, auto) auto;
-    grid-template-columns: 75px auto;
-}
-
-app-header{
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 2;
-    grid-column-start: 2;
-}
-
-app-navbar{
-    grid-row-start: 1;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 1;
-}
-
-app-footer{
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-start: 2;
-}
 

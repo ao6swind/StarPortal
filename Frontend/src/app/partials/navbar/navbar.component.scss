@@ -1,11 +1,23 @@
 @import "../../../scss/custom";
 
-.navbar-implode{
-    .navbar-logo span{
-        display: none;
+@media screen and (min-width: 796px)
+{
+    .navbar-implode{
+        .navbar-logo span{
+            display: none;
+        }
+        .navbar-menu li span:first-child{
+            display: none;
+        }
     }
-    .navbar-menu li span:first-child{
-        display: none;
+}
+
+@media screen and (max-width: 795px)
+{
+    .navbar-implode{
+        .navbar-logo{
+            display: none;
+        }
     }
 }
 
