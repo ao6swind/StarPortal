@@ -1,9 +1,23 @@
 <header>
   <div class="pnl-controls">
-    <span class="fas fa-bars"></span>
+    <span class="fas fa-bars" (click)="explodeMenu()"></span>
   </div>
   <div class="pnl-user">
-    <span class="fas fa-user"></span>
-    <span>User</span>
+    <div class="uk-inline">
+      <div>
+        <span class="fas fa-user"></span>
+        <span>User</span>
+      </div>
+      <div uk-dropdown="mode: click;">
+        <ul class="uk-nav uk-dropdown-nav">
+          <li>
+            <a href="#">
+              <span class="fas fa-sign-out-alt"></span>
+              <span>登出</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>

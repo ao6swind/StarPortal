@@ -1,6 +1,6 @@
-<div id="pnlGridContainer">
-  <app-header></app-header>
-  <app-navbar></app-navbar>
+<div id="pnlGridContainer" [class]="(isExplode) ? 'pnl-implode' : 'pnl-explode'">
+  <app-header (explodeMenuEvent)="explodeMenu($event)"></app-header>
+  <app-navbar [isExplode]="isExplode"></app-navbar>
   <section>
     <router-outlet></router-outlet>
   </section>

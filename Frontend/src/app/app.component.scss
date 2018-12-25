@@ -28,9 +28,14 @@ app-footer{
 /******************************
  * Desktop 排版
  ******************************/ 
-#pnlGridContainer{
+.pnl-explode{
     grid-template-rows: 50px minmax(85%, auto) auto;
     grid-template-columns: 250px auto;
+}
+
+.pnl-implode{
+    grid-template-rows: 50px minmax(85%, auto) auto;
+    grid-template-columns: 75px auto;
 }
 
 app-header{

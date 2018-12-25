@@ -1,14 +1,10 @@
 header{
-   
-    line-height: 50px;
-    
-    padding-right: 15px;
     display: grid;
     grid-template-columns: auto auto;
-    span{
-        padding-left: 10px;
-    }
-    .pnl-control{
+    line-height: 50px;
+    padding-right: 15px;
+    
+    .pnl-controls{
         grid-column-start: 1;
         grid-column-end: 1;
     }
@@ -16,5 +12,9 @@ header{
         grid-column-start: 2;
         grid-column-end: 2;
         text-align: right;
+    }
+    span{
+        padding-left: 10px;
+        cursor: pointer;
     }
 }
