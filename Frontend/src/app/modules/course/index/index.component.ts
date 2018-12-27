@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  public courses: any
+
+  constructor(private data: DataService) { 
+    this.data.get('course').subscribe(
+      data => { console.log(data) },
+      error => { console.error(error) }  
+    );
+  }
 
   ngOnInit() {
+    
   }
 
 }
