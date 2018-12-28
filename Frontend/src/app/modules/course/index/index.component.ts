@@ -12,7 +12,7 @@ export class IndexComponent implements OnInit {
 
   constructor(private data: DataService) { 
     this.data.get('course').subscribe(
-      data => { console.log(data) },
+      data => { this.courses = data },
       error => { console.error(error) }  
     );
   }

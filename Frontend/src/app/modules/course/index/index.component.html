@@ -1,3 +1,40 @@
-<p>
-  course index works!
-</p>
+
+<h2>課程</h2>
+<ul class="uk-breadcrumb">
+  <li>課程列表</li>
+</ul>
+<a class="uk-button uk-button-small uk-button-primary" routerLink="/course/create">
+  <span class="fas fa-plus"></span>
+  <span>新增</span>
+</a>
+<table class="uk-table uk-table-small uk-table-middle uk-table-hover uk-table-responsive">
+  <thead class="uk-background-muted">
+    <tr>
+      <th>年</th>
+      <th>季</th>
+      <th>名稱</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.year }}</td>
+      <td>{{ course.season }}</td>
+      <td>{{ course.name }}</td>
+      <td>
+        <a class="uk-button uk-button-small uk-button-default">
+          <span class="fas fa-eye"></span>
+          <span>瀏覽</span>
+        </a>
+        <a class="uk-button uk-button-small uk-button-default">
+          <span class="fas fa-edit"></span>
+          <span>修改</span>
+        </a>
+        <a class="uk-button uk-button-small uk-button-danger">
+          <span class="fas fa-trash-alt"></span>
+          <span>刪除</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
