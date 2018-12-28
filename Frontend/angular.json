@@ -26,13 +26,13 @@
               "src/favicon.ico",
               "src/assets",
               {
-                "glob": "**/uikit.min.js",
-                "input": "./node_modules/uikit/dist/js",
+                "glob": "**/*.min.js",
+                "input": "./node_modules/bootstrap/dist/js",
                 "output": "./assets/js"
               },
               {
-                "glob": "**/uikit-icons.min.js",
-                "input": "./node_modules/uikit/dist/js",
+                "glob": "**/*.min.js",
+                "input": "./node_modules/jquery/dist",
                 "output": "./assets/js"
               }
             ],

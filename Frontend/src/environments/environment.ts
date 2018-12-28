@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost/StarPortal/Backend/public/api/'
+  api: 'http://localhost/StarPortal/Backend/api/'
 };
 
 /*

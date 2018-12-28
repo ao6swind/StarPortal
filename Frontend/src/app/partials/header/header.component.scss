@@ -1,6 +1,6 @@
 header{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
     line-height: 50px;
     padding-right: 15px;
     
@@ -11,7 +11,7 @@ header{
     .pnl-user{
         grid-column-start: 2;
         grid-column-end: 2;
-        text-align: right;
+     
     }
     span{
         padding-left: 10px;

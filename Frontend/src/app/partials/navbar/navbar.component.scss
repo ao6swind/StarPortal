@@ -2,11 +2,11 @@
 
 @media screen and (min-width: 796px)
 {
-    .navbar-implode{
-        .navbar-logo span{
+    .pnl-menu-implode{
+        .pnl-menu-logo span{
             display: none;
         }
-        .navbar-menu li span:first-child{
+        .pnl-menu-content li span:first-child{
             display: none;
         }
     }
@@ -14,17 +14,17 @@
 
 @media screen and (max-width: 795px)
 {
-    .navbar-implode{
-        .navbar-logo{
+    .pnl-menu-implode{
+        .pnl-menu-logo{
             display: none;
         }
     }
 }
 
-.navbar{
-    .navbar-logo{
+.pnl-menu{
+    .pnl-menu-logo{
         cursor: pointer;
-        border-bottom: 1px solid $ft-color-2;
+        background-color: $bg-color-3;
         line-height: 0;
         height: 50px;
         padding-left:20px;
@@ -33,7 +33,7 @@
             line-height: 50px;
         }
     }
-    .navbar-menu{
+    .pnl-menu-content{
         list-style: none;
         margin: 0;
         padding: 0;

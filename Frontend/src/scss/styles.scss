@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~node_modules/uikit/src/scss/variables.scss";
-@import "~node_modules/uikit/src/scss/mixins.scss";
-@import "~node_modules/uikit/src/scss/uikit.scss";
+@import "~node_modules/bootstrap/scss/bootstrap.scss";
+@import "_custom.scss";
 
 html, body{
     width:100%;
@@ -11,23 +10,16 @@ html, body{
 h2{
     font-family: 'microsoft yahei';
 }
-.uk-button{
+.btn{
+    border-radius: 0;
     span:first-child{
         margin-right: 10px;
     }
 }
-table{
-    thead>*{
-        background-color: rgba(0,0,0,0.45);
+.txt-page-title{
+    border-bottom: 5px solid $bg-color-1;
+    padding-bottom: 5px;
+    span{
+        margin-right:5px;
     }
-    tbody>*{
-        color: rgba(0,0,0,0.85);;
-        background-color: rgba(0,0,0,0.1);
-    }
-}
-.uk-table th{
-    color: white;   
-}
-td{
-    border-top: 1px solid gray;
 }

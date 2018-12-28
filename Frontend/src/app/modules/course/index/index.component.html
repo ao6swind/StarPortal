@@ -1,14 +1,13 @@
+<h3 class="txt-page-title">
+  <span>課程列表</span>
+  <a class="btn btn-sm btn-primary" routerLink="/course/create">
+    <span class="fas fa-plus"></span>
+    <span>新增</span>
+  </a>
+</h3>
 
-<h2>課程</h2>
-<ul class="uk-breadcrumb">
-  <li>課程列表</li>
-</ul>
-<a class="uk-button uk-button-small uk-button-primary" routerLink="/course/create">
-  <span class="fas fa-plus"></span>
-  <span>新增</span>
-</a>
-<table class="uk-table uk-table-small uk-table-middle uk-table-hover uk-table-responsive">
-  <thead class="uk-background-muted">
+<table class="table table-hover">
+  <thead class="thead-dark">
     <tr>
       <th>年</th>
       <th>季</th>
@@ -22,18 +21,18 @@
       <td>{{ course.season }}</td>
       <td>{{ course.name }}</td>
       <td>
-        <a class="uk-button uk-button-small uk-button-default">
+        <a class="btn btn-sm btn-secondary" routerLink="/course/detail/{{ course.id }}">
           <span class="fas fa-eye"></span>
           <span>瀏覽</span>
         </a>
-        <a class="uk-button uk-button-small uk-button-default">
+        <a class="btn btn-sm btn-secondary" routerLink="/course/edit/{{ course.id }}">
           <span class="fas fa-edit"></span>
           <span>修改</span>
         </a>
-        <a class="uk-button uk-button-small uk-button-danger">
+        <button type="button" class="btn btn-sm btn-danger">
           <span class="fas fa-trash-alt"></span>
           <span>刪除</span>
-        </a>
+        </button>
       </td>
     </tr>
   </tbody>
