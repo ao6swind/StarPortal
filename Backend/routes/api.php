@@ -19,6 +19,7 @@ Route::group([
      */
     'middleware' => 'cors'
 ], function ($router) {
+    Route::get('course/parameters', 'CourseController@parameters');
     Route::resource('course',   'CourseController');
     Route::resource('student',  'StudentController');
     Route::resource('teacher',  'teacherController');

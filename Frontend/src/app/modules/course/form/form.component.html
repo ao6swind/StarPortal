@@ -5,3 +5,88 @@
     <span>回列表</span>
   </a>
 </h3>
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>課程名稱</label>
+      <input class="form-control"
+        name="course.name" 
+        [(ngModel)]="course.name"
+        placeholder="請輸入課程名稱">
+    </div>
+    <div class="form-group col-md-2">
+      <label>年度</label>
+      <input class="form-control" 
+        name="course.year" 
+        [(ngModel)]="course.year"
+        placeholder="請輸入年度" 
+        type="number">
+    </div>
+    <div class="form-group col-md-2">
+      <label>季節</label>
+      <select class="form-control" name="course.season" [(ngModel)]="course.season">
+        <option value="">請選擇季節</option>
+        <option *ngFor="let season of seasons" value="{{ season.id }}">{{ season.name }}</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label>系列</label>
+      <select class="form-control" name="course.main_series" [(ngModel)]="course.main_series">
+        <option value="">請選擇系列</option>
+        <option *ngFor="let series of series_list" value="{{ series.id }}">{{ series.name }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label>子系列</label>
+      <div class="form-inline">
+        <button class="btn btn-secondary" (click)="addSubSeries()">
+          <span class="fas fa-plus"></span>
+          <span>增加</span>
+        </button>
+        <div class="input-group" *ngFor="let series of course.sub_series; let i = index">
+          <select class="form-control" name="course.sub_series[{{i}}]" [(ngModel)]="course.sub_series[i]">
+            <option value="">請選擇子系列</option>
+            <option *ngFor="let series of series_list" value="{{ series.id }}">{{ series.name }}</option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-danger" type="button" (click)="removeSubSeries(i)">移除</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label>師資</label>
+      <div class="form-inline">
+        <button class="btn btn-secondary" (click)="addTeacher()">
+          <span class="fas fa-plus"></span>
+          <span>增加</span>
+        </button>
+        <div class="input-group" *ngFor="let teacher of course.teachers; let i = index">
+          <select class="form-control" name="course.teachers[{{i}}]" [(ngModel)]="course.teachers[i]">
+            <option value="">請選擇師資</option>
+            <option *ngFor="let teacher of teachers" value="{{ teacher.id }}">{{ teacher.name }}</option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-danger" type="button" (click)="removeTeacher(i)">移除</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label>課程介紹</label>
+      <ck-editor name="course.description" [(ngModel)]="course.description"></ck-editor>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <span class="fas fa-save"></span>
+    <span>儲存</span>
+  </button>
+</form>
+{{ course | json }}

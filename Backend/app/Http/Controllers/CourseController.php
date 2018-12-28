@@ -31,4 +31,13 @@ class CourseController extends Controller
     {
         //
     }
+
+    public function parameters()
+    {
+        $parameters = array(
+            "season" => config('variables.season'),
+            "series" => config('variables.series')
+        );
+        return response()->json($parameters);
+    }
 }
